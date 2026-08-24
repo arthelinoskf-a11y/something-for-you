@@ -1,0 +1,2024 @@
+/* =========================================================
+   SOMETHING FOR YOU ♡
+   SOFT ROMANTIC / NATURAL / MOBILE FRIENDLY
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    background: #f7eee9;
+    color: #4b3632;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+button {
+    font-family: inherit;
+}
+
+button,
+.envelope {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   2. VARIABLES
+========================================================= */
+
+:root {
+
+    --cream: #f8efea;
+    --cream-light: #fffaf7;
+    --cream-dark: #ead9d1;
+
+    --brown: #4b3632;
+    --brown-light: #765b54;
+
+    --pink: #c98f9c;
+    --pink-soft: #e7c6ca;
+    --rose: #b87582;
+
+    --white: #fffdfb;
+
+    --shadow-soft:
+        0 20px 60px rgba(92, 56, 51, 0.12);
+
+    --shadow-deep:
+        0 30px 90px rgba(60, 38, 35, 0.18);
+}
+
+
+/* =========================================================
+   3. WEBSITE
+========================================================= */
+
+.website {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   4. PAGE
+========================================================= */
+
+.page {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 24px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(35px)
+        scale(.985);
+
+    transition:
+        opacity .8s ease,
+        transform .9s cubic-bezier(.22, .61, .36, 1),
+        visibility .8s ease;
+
+    isolation: isolate;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   5. PARTICLES
+========================================================= */
+
+.particles {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+.particle {
+    position: absolute;
+    bottom: -20px;
+
+    color: rgba(170, 120, 126, .45);
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, .6);
+
+    animation:
+        particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+
+    0% {
+        transform:
+            translateY(20px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .65;
+    }
+
+    80% {
+        opacity: .4;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(30deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   6. COMMON LABEL
+========================================================= */
+
+.tiny-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: .28em;
+    text-transform: uppercase;
+
+    color: #8b7068;
+
+    opacity: .75;
+}
+
+
+/* =========================================================
+   7. COMMON BUTTON
+========================================================= */
+
+.main-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    min-width: 150px;
+
+    padding: 14px 23px;
+
+    border:
+        1px solid
+        rgba(105, 70, 65, .18);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 253, 251, .8);
+
+    color: var(--brown);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: .08em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(75, 50, 45, .08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.main-button span {
+    font-size: 15px;
+
+    transition:
+        transform .3s ease;
+}
+
+.main-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, .96);
+
+    box-shadow:
+        0 15px 38px
+        rgba(75, 50, 45, .13);
+}
+
+.main-button:hover span:last-child {
+
+    transform:
+        translateX(4px);
+}
+
+.main-button:active {
+
+    transform:
+        scale(.96);
+}
+
+
+/* =========================================================
+   8. PAGE 1 — OPENING
+========================================================= */
+
+.page-opening {
+
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            #fffdfb 0%,
+            #f9efeb 48%,
+            #eadbd4 100%
+        );
+
+    color: var(--brown);
+}
+
+.page-opening::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(225, 179, 184, .18),
+            transparent 70%
+        );
+
+    filter: blur(12px);
+
+    z-index: -1;
+}
+
+.opening-content {
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    animation:
+        openingAppear 1.1s ease both;
+}
+
+@keyframes openingAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+.opening-content h1 {
+
+    margin-bottom: 12px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(60px, 15vw, 105px);
+
+    font-weight: 500;
+
+    line-height: .85;
+
+    letter-spacing: -.04em;
+
+    color: #513b36;
+}
+
+.opening-content p {
+
+    margin-bottom: 34px;
+
+    font-size: 13px;
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    letter-spacing: .04em;
+
+    color: #765b54;
+}
+
+.scroll-hint {
+
+    position: absolute;
+
+    bottom: 28px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    color: #8d7169;
+
+    opacity: .5;
+}
+
+
+/* =========================================================
+   9. PAGE 2 — PRANK
+========================================================= */
+
+.page-prank {
+
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            #fffdfb 0%,
+            #faf0ec 48%,
+            #eadbd4 100%
+        );
+
+    color: var(--brown);
+}
+
+.page-prank::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(214, 165, 174, .14),
+            transparent 70%
+        );
+
+    filter: blur(15px);
+
+    z-index: -1;
+}
+
+.prank-content {
+
+    text-align: center;
+
+    max-width: 500px;
+
+    animation:
+        prankAppear .9s ease both;
+}
+
+@keyframes prankAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+.prank-content h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 14vw, 90px);
+
+    font-weight: 500;
+
+    line-height: .85;
+
+    letter-spacing: -.03em;
+
+    color: #503b36;
+}
+
+.prank-content h3 {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: .28em;
+
+    color: var(--rose);
+}
+
+.prank-content p {
+
+    max-width: 280px;
+
+    margin:
+        24px auto 30px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    color: #80665e;
+}
+
+.dark-button {
+
+    background: #55403a;
+
+    color: #fffaf7;
+
+    border-color: #55403a;
+
+    box-shadow:
+        0 15px 35px
+        rgba(75, 50, 45, .18);
+}
+
+.dark-button:hover {
+
+    background: #402e2a;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   10. PAGE 3 — BOUQUET
+========================================================= */
+
+.page-bouquet {
+
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            #fffefc 0%,
+            #fbf2ee 46%,
+            #eadbd4 100%
+        );
+
+    color: var(--brown);
+
+    justify-content: flex-start;
+
+    padding-top: 65px;
+}
+
+.bouquet-header {
+
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+.bouquet-header span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 9px;
+
+    letter-spacing: .23em;
+
+    text-transform: uppercase;
+
+    color: #90756d;
+}
+
+.bouquet-header h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 11vw, 70px);
+
+    font-weight: 500;
+
+    line-height: .95;
+
+    color: #4c3732;
+}
+
+
+/* =========================================================
+   BOUQUET GLOW
+========================================================= */
+
+.bouquet-glow {
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    width: min(100vw, 600px);
+    height: min(100vw, 600px);
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(205, 157, 180, .22) 0%,
+            rgba(244, 218, 225, .14) 36%,
+            transparent 70%
+        );
+
+    filter: blur(28px);
+
+    z-index: -1;
+
+    animation:
+        bouquetGlow 4s ease-in-out infinite;
+}
+
+@keyframes bouquetGlow {
+
+    0%,
+    100% {
+
+        opacity: .65;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.95);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.05);
+    }
+}
+
+
+/* =========================================================
+   BOUQUET IMAGE
+========================================================= */
+
+.bouquet-wrapper {
+
+    position: relative;
+
+    width: min(88vw, 460px);
+
+    height: min(58vh, 480px);
+
+    min-height: 280px;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+.image-glow {
+
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(225, 173, 190, .20),
+            transparent 68%
+        );
+
+    filter: blur(25px);
+
+    animation:
+        imageGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes imageGlow {
+
+    0%,
+    100% {
+
+        transform:
+            scale(.94);
+
+        opacity: .55;
+    }
+
+    50% {
+
+        transform:
+            scale(1.06);
+
+        opacity: .9;
+    }
+}
+
+.bouquet-image {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    filter:
+        drop-shadow(
+            0 28px 30px
+            rgba(74, 44, 42, .14)
+        );
+
+    animation:
+        bouquetFloat 5s ease-in-out infinite;
+}
+
+@keyframes bouquetFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   BOUQUET CAPTION
+========================================================= */
+
+.bouquet-caption {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: auto;
+
+    padding-bottom: 20px;
+}
+
+.bouquet-caption p {
+
+    margin-bottom: 17px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: #624a44;
+}
+
+.light-button {
+
+    background:
+        rgba(255, 253, 251, .85);
+
+    color: #56413b;
+}
+
+.swipe-hint {
+
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 8px;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    color: #9b8077;
+
+    opacity: .5;
+}
+
+
+/* =========================================================
+   11. PAGE 4 — LOVE LETTER
+========================================================= */
+
+.page-letter {
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #fffdfb 0%,
+            #f8efeb 52%,
+            #e9dad3 100%
+        );
+
+    color: var(--brown);
+
+    justify-content: flex-start;
+
+    padding-top: 65px;
+}
+
+.letter-header {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.letter-header span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 9px;
+
+    letter-spacing: .24em;
+
+    text-transform: uppercase;
+
+    color: #967a71;
+}
+
+.letter-header h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 11vw, 68px);
+
+    font-weight: 500;
+
+    line-height: .95;
+
+    color: #4e3934;
+}
+
+
+/* =========================================================
+   12. ENVELOPE
+========================================================= */
+
+.envelope {
+
+    position: relative;
+
+    width: min(86vw, 390px);
+
+    aspect-ratio: 1.5 / 1;
+
+    margin-top: 12px;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+
+    filter:
+        drop-shadow(
+            0 25px 35px
+            rgba(73, 47, 43, .16)
+        );
+
+    transition:
+        transform .35s ease;
+}
+
+.envelope:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+.envelope:active {
+
+    transform:
+        scale(.98);
+}
+
+
+/* =========================================================
+   13. LETTER PAPER — IKUT MEMANJANG KE BAWAH
+========================================================= */
+
+.letter-paper {
+    position: absolute;
+
+    left: 8%;
+    bottom: 5%;
+
+    width: 84%;
+
+    /* KERTAS IKUT TINGGI AMPLOP */
+    height: 82%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdfa,
+            #fdf6f0
+        );
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(66, 42, 39, .08);
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    transform:
+        translateY(4%);
+
+    transition:
+        transform .9s
+        cubic-bezier(.22, .61, .36, 1),
+
+        z-index 0s linear .3s;
+}
+
+.envelope.opened .letter-paper {
+    transform:
+        translateY(-48%);
+
+    z-index: 8;
+}
+
+
+/*
+   SAAT TERBUKA:
+   kertas naik dari dalam amplop,
+   tapi tidak terlalu tinggi.
+*/
+
+.envelope.opened .letter-paper {
+
+    transform:
+        translateY(-38%);
+
+    z-index: 8;
+}
+
+
+/* =========================================================
+   14. LETTER INNER
+========================================================= */
+
+.letter-paper-inner {
+
+    width: 100%;
+    height: 100%;
+
+    padding:
+        15px 18px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.letter-date {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 14px;
+
+    color: #a47b80;
+
+    font-style: italic;
+}
+
+.letter-title {
+
+    margin-bottom: 7px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #634c46;
+}
+
+.letter-text {
+
+    flex: 1;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 13px;
+
+    line-height: 1.38;
+
+    color: #634c46;
+
+    white-space: pre-line;
+
+    overflow: hidden;
+}
+
+.letter-signature {
+
+    display: block;
+
+    margin-top: 5px;
+
+    text-align: right;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    color: #a47b80;
+}
+
+
+/* =========================================================
+   15. ENVELOPE BODY
+========================================================= */
+
+.envelope-body {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f0d8d2,
+            #dfbcb9
+        );
+
+    border-radius: 5px;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   16. ENVELOPE POCKET
+========================================================= */
+
+.envelope-pocket {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8ccc8,
+            #d7adaf
+        );
+
+    clip-path:
+        polygon(
+            0 43%,
+            50% 76%,
+            100% 43%,
+            100% 100%,
+            0 100%
+        );
+
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   12. ENVELOPE — VERTICAL / PANJANG KE BAWAH
+========================================================= */
+
+.envelope {
+    position: relative;
+
+    /* LEBAR TETAP */
+    width: min(86vw, 390px);
+
+    /* TINGGI DIBUAT SENDIRI */
+    height: min(115vw, 520px);
+
+    /* JANGAN PAKAI ASPECT-RATIO */
+    aspect-ratio: auto;
+
+    margin-top: 12px;
+
+    cursor: pointer;
+    perspective: 1000px;
+
+    filter:
+        drop-shadow(
+            0 25px 35px
+            rgba(73, 47, 43, .16)
+        );
+
+    transition:
+        transform .35s ease;
+}
+
+.envelope:hover {
+    transform:
+        translateY(-4px);
+}
+
+.envelope:active {
+    transform:
+        scale(.98);
+}
+
+
+/* =========================================================
+   18. WAX SEAL
+========================================================= */
+
+.wax-seal {
+
+    position: absolute;
+
+    left: 50%;
+    top: 47%;
+
+    width: 47px;
+    height: 47px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #dca4ae,
+            #a96370
+        );
+
+    color: #fff3f0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 5px 12px
+        rgba(97, 47, 56, .22);
+
+    z-index: 10;
+
+    transition:
+        opacity .35s ease,
+        transform .5s ease;
+}
+
+.envelope.opened .wax-seal {
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.5);
+}
+
+
+/* =========================================================
+   19. LETTER HINT
+========================================================= */
+
+.letter-hint {
+
+    margin-top: 25px;
+
+    font-size: 9px;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    color: #967c73;
+
+    opacity: .65;
+
+    transition:
+        opacity .4s ease;
+}
+
+.envelope.opened + .letter-hint {
+
+    opacity: 0;
+}
+
+
+/* =========================================================
+   20. LETTER BUTTON
+========================================================= */
+
+.letter-button {
+
+    margin-top: 18px;
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+
+.letter-button.hidden {
+
+    display: none;
+
+    opacity: 0;
+
+    transform:
+        translateY(12px);
+}
+
+
+/* =========================================================
+   21. PAGE 5 — FINAL
+   SAME LIGHT THEME
+========================================================= */
+
+.page-final {
+
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            #fffdfb 0%,
+            #faf0ec 48%,
+            #eadbd4 100%
+        );
+
+    color: var(--brown);
+}
+
+.page-final::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(214, 164, 177, .16),
+            transparent 52%
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   22. FINAL GLOW
+========================================================= */
+
+.final-glow {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 330px;
+    height: 330px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(205, 157, 180, .18),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        finalGlow 4s ease-in-out infinite;
+}
+
+@keyframes finalGlow {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(.9);
+
+        opacity: .55;
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.1);
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   23. FINAL CONTENT
+========================================================= */
+
+.final-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    animation:
+        finalAppear 1.4s ease both;
+}
+
+@keyframes finalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+.final-content > span {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 9px;
+
+    letter-spacing: .3em;
+
+    text-transform: uppercase;
+
+    color: #967a71;
+
+    opacity: .8;
+}
+
+
+/* =========================================================
+   24. BIG HEART
+========================================================= */
+
+.big-heart {
+
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(65px, 19vw, 120px);
+
+    line-height: .8;
+
+    color: #c98290;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(201, 130, 144, .25)
+        );
+
+    animation:
+        heartbeat 2.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    12% {
+
+        transform:
+            scale(1.08);
+    }
+
+    24% {
+
+        transform:
+            scale(1);
+    }
+
+    36% {
+
+        transform:
+            scale(1.05);
+    }
+
+    48% {
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   25. FINAL TITLE
+========================================================= */
+
+.final-content h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 12vw, 75px);
+
+    font-weight: 500;
+
+    line-height: .95;
+
+    letter-spacing: .02em;
+
+    color: #4e3934;
+}
+
+
+/* =========================================================
+   26. DIVIDER
+========================================================= */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width:
+        min(230px, 65vw);
+
+    margin:
+        22px auto;
+}
+
+.divider i {
+
+    display: block;
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(145, 108, 104, .35)
+        );
+}
+
+.divider i:last-child {
+
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            rgba(145, 108, 104, .35)
+        );
+}
+
+.divider b {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    color: #b87582;
+}
+
+
+/* =========================================================
+   27. FINAL TEXT
+========================================================= */
+
+.final-content p {
+
+    margin-bottom: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    color: #725a54;
+}
+
+.final-content small {
+
+    font-size: 9px;
+
+    letter-spacing: .12em;
+
+    color: #967a71;
+
+    opacity: .75;
+}
+
+
+/* =========================================================
+   28. FLOATING HEARTS
+========================================================= */
+
+.floating-hearts {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+.floating-hearts span {
+
+    position: absolute;
+
+    bottom: -40px;
+
+    color:
+        rgba(190, 122, 135, .35);
+
+    font-size: 18px;
+
+    animation:
+        heartFloat linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+
+    left: 8%;
+
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+
+    left: 20%;
+
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+
+    left: 34%;
+
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(4) {
+
+    left: 50%;
+
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(5) {
+
+    left: 65%;
+
+    animation-duration: 8s;
+    animation-delay: 1.5s;
+}
+
+.floating-hearts span:nth-child(6) {
+
+    left: 77%;
+
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(7) {
+
+    left: 88%;
+
+    animation-duration: 7s;
+    animation-delay: 2.5s;
+}
+
+.floating-hearts span:nth-child(8) {
+
+    left: 42%;
+
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+@keyframes heartFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .5;
+    }
+
+    70% {
+        opacity: .4;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(30deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   29. MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* OPENING */
+
+    .opening-content h1 {
+
+        font-size: 68px;
+    }
+
+
+    /* PRANK */
+
+    .prank-content h2 {
+
+        font-size: 65px;
+    }
+
+
+    /* BOUQUET */
+
+    .page-bouquet {
+
+        padding-top: 55px;
+    }
+
+    .bouquet-header h2 {
+
+        font-size: 52px;
+    }
+
+    .bouquet-wrapper {
+
+        width: 94vw;
+
+        height: 52vh;
+
+        min-height: 270px;
+
+        margin-top: 2px;
+    }
+
+    .bouquet-caption {
+
+        padding-bottom: 22px;
+    }
+
+    .bouquet-caption p {
+
+        font-size: 18px;
+    }
+
+
+    /* LOVE LETTER */
+
+    .page-letter {
+
+        padding-top: 55px;
+    }
+
+    .letter-header {
+
+        margin-bottom: 18px;
+    }
+
+    .letter-header h2 {
+
+        font-size: 51px;
+    }
+
+    .envelope {
+    width: 88vw;
+    max-width: 370px;
+
+    /* LEBIH TINGGI */
+    height: 115vw;
+
+    /* BATAS SUPAYA NGGAK KEGEDEAN */
+    max-height: 500px;
+
+    aspect-ratio: auto;
+
+    margin-top: 8px;
+    }
+
+    .letter-paper {
+    left: 8%;
+    width: 84%;
+
+    height: 82%;
+
+    bottom: 5%;
+}
+
+.envelope.opened .letter-paper {
+    transform:
+        translateY(-48%);
+}
+
+    .envelope.opened .letter-paper {
+
+        transform:
+            translateY(-38%);
+    }
+
+    .letter-paper-inner {
+
+        padding:
+            14px 16px;
+    }
+
+    .letter-date {
+
+        font-size: 13px;
+
+        margin-bottom: 4px;
+    }
+
+    .letter-title {
+
+        font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .letter-text {
+
+        font-size: 12.5px;
+
+        line-height: 1.36;
+    }
+
+    .letter-signature {
+
+        font-size: 12px;
+    }
+
+    .wax-seal {
+
+        width: 43px;
+        height: 43px;
+
+        font-size: 21px;
+    }
+
+    .letter-hint {
+
+        margin-top: 18px;
+    }
+
+
+    /* FINAL */
+
+    .final-content h2 {
+
+        font-size: 48px;
+    }
+
+    .final-content p {
+
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   30. SMALL HEIGHT PHONE
+========================================================= */
+
+@media (max-height: 680px) {
+
+    .page-bouquet {
+
+        padding-top: 42px;
+    }
+
+    .bouquet-wrapper {
+
+        height: 45vh;
+
+        min-height: 230px;
+    }
+
+    .bouquet-caption p {
+
+        margin-bottom: 10px;
+
+        font-size: 16px;
+    }
+
+    .letter-header {
+
+        margin-bottom: 12px;
+    }
+
+    .letter-header h2 {
+
+        font-size: 44px;
+    }
+
+    .envelope {
+
+        width: 82vw;
+    }
+
+    .letter-hint {
+
+        margin-top: 18px;
+    }
+}
+
+
+/* =========================================================
+   31. TABLET / DESKTOP
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .page {
+
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .bouquet-wrapper {
+
+        width: 500px;
+        height: 500px;
+    }
+
+    .envelope {
+
+        width: 430px;
+    }
+}
+
+
+/* =========================================================
+   32. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: .01ms !important;
+    }
+}
